@@ -1,0 +1,39 @@
+.game-card {
+    height: 100vh;
+    font-family: 'Open Sans', monospace;
+}
+
+.card-header {
+    background-color: #336662;
+    color: #fff;
+}
+
+.card-footer {
+    margin: 0;
+    padding: 0;
+}
+
+.card-body {
+background: #e8e8e8;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.btn-link {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+    background: #a60000;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.btn-link:hover {
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+}    
