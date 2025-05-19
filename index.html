@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Угадайка</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
 </head>
+
 <body>
-<div class="container">
-    <div class="row game-card align-items-center">
-        <div class="col col-md-4 offset-md-4">
-            <div class="card text-center">
-                <div class="card-header">
-                    <p class="m-0">Вопрос №<span id="orderNumberField">5</span></p>
+    <div class="container">
+        <h2>Игра «Угадайка»</h2>
+        <!-- Begin hiding elements -->
+        <div class="input-data">
+            <form>
+                <div class="form-group">
+                    <label>Минимальное значение числа для игры:</label>
+                    <input type="number" class="form-control" id="minvalue" placeholder="-999">
                 </div>
-                <div class="card-body">
-                    <div class="row no-gutters">
-                        <div class="col">
-                            <h3 class="card-title m-0"><span id="answerField">Вы загадали число 5?</span></h3>
+                <div class="form-group">
+                    <label>Максимальное значение числа для игры:</label>
+                    <input type="number" class="form-control" id="maxvalue" placeholder="999">
+                </div>
+            </form>
+            <button type="button" class="btn btn-info start" data-toggle="collapse" data-target="#game">Начать игру</button>
+        </div>
+        <!-- End hiding elements -->
+        <div id="game" class="collapse">
+
+            <div class="alert alert-info alert-dismissible">
+                <p id="alertText"></p>
+            </div>
+
+            <div class="row game-card align-items-center">
+                <div class="col col-md-4 offset-md-4">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <p class="m-0">Вопрос №<span id="orderNumberField">5</span></p>
+                        </div>
+                        <div class="card-body">
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <h3 class="card-title m-0"><span id="answerField">Вы загадали число 5?</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="btn-group">
+                                <button class="btn btn-info" id="btnLess">&#129095;<br>меньше</button>
+                                <button class="btn btn-success btn-lg" id="btnEqual">Верно!</button>
+                                <button class="btn btn-info" id="btnOver">&#129093;<br>больше</button>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-link" id="btnRetry">Заново</button>
                         </div>
                     </div>
-                </div>
-                <div class="card-body">
-                    <div class="btn-group">
-                        <button class="btn btn-info" id="btnLess">&#129095;<br>меньше</button>
-                        <button class="btn btn-success btn-lg" id="btnEqual">Верно!</button>
-                        <button class="btn btn-info" id="btnOver">&#129093;<br>больше</button>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-link" id="btnRetry">Заново</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
