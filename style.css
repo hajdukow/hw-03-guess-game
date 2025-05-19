@@ -1,6 +1,41 @@
+.container {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 45px;
+    font-size: 3rem;
+}
+
+.input-data {
+    margin-top: 45px;
+    font-size: 1.15rem;
+}
+
+.form-control {
+    width: 8rem;
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+}
+
+.start {
+    margin-top: 25px;
+}
+
+#alertText {
+    margin: 10px 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
 .game-card {
-    height: 100vh;
+    height: 55vh;
     font-family: 'Open Sans', monospace;
+}
+
+.alert-info {
+    margin-top: 45px;
 }
 
 .card-header {
